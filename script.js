@@ -26,6 +26,3 @@ nextButton.addEventListener('click', () => {
     currentImageIndex = currentImageIndex === 1 ? 2 : 1;
     displayedImage.src = `${currentImageIndex}.jpg`;
 });
-
-
-
