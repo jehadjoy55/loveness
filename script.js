@@ -1,9 +1,24 @@
 // Get references to HTML elements
+const loveButton = document.getElementById('loveButton');
+const backgroundMusic = document.getElementById('backgroundMusic');
+const contentContainer = document.getElementById('contentContainer');
 const displayedImage = document.getElementById('displayedImage');
 const nextButton = document.getElementById('nextButton');
 
 // Variable to track the current image
 let currentImageIndex = 1;
+
+// Event listener for the "Love" button
+loveButton.addEventListener('click', () => {
+    // Play the music
+    backgroundMusic.play();
+
+    // Show the content container
+    contentContainer.classList.remove('hidden');
+
+    // Hide the Love button
+    loveButton.style.display = 'none';
+});
 
 // Event listener for the "Next" button
 nextButton.addEventListener('click', () => {
@@ -12,10 +27,4 @@ nextButton.addEventListener('click', () => {
     displayedImage.src = `${currentImageIndex}.jpg`;
 });
 
-// Optional: Manage background music
-const backgroundMusic = document.getElementById('backgroundMusic');
-// Example: Pause the music programmatically
-// backgroundMusic.pause();
-// Example: Resume the music programmatically
-// backgroundMusic.play();
 
