@@ -5,11 +5,40 @@ body {
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #ff7eb3, #ff758c);
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     overflow: hidden; /* Prevents horizontal overflow */
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
+
+/* Love Button Styling */
+#loveButton {
+    padding: 20px 40px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    background-color: #ff5a80;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    animation: blink-animation 1.5s infinite;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#loveButton:hover {
+    background-color: #ff4070;
+}
+
+/* Blinking Animation for Button */
+@keyframes blink-animation {
+    50% {
+        opacity: 0.6;
+    }
 }
 
 /* Container and Layout */
@@ -42,7 +71,7 @@ img {
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3); /* Optional styling */
 }
 
-/* Button Styling */
+/* Next Button Styling */
 #nextButton {
     margin-top: 10px;
     padding: 10px 20px;
@@ -60,16 +89,3 @@ img {
 #nextButton:hover {
     background-color: #ff4070;
 }
-
-/* Blinking Animation for Button */
-@keyframes blink-animation {
-    50% {
-        opacity: 0.6;
-    }
-}
-
-/* Hide Audio Player (Optional) */
-audio {
-    display: none;
-}
-
