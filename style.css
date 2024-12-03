@@ -3,7 +3,12 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #ff7eb3, #ff758c);
-    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Prevents horizontal overflow */
 }
 
 .container {
@@ -11,21 +16,31 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    padding: 20px;
-    text-align: center;
-    overflow-y: auto; /* Enables scrolling on mobile devices */
+    width: 100%;
+    height: 100%;
+    overflow-y: auto; /* Allows vertical scrolling for long images */
 }
 
 .image-wrapper {
-    width: 100%; /* Adjusts the image width to the viewport */\n    height: auto; /* Maintains the aspect ratio */\n    max-height: 80vh; /* Ensures the image doesn’t exceed 80% of the viewport height */\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    overflow: hidden;\n    border-radius: 15px;\n    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);\n}
+    width: 100%; /* Full width of the screen */
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 img {
-    width: auto;
-    height: 100%; /* Ensures the image fills the container height */\n    max-width: 100%; /* Ensures the image does not overflow horizontally */\n    object-fit: contain; /* Preserves the aspect ratio without cropping */\n    border-radius: 15px;\n}
+    max-width: 100%; /* Ensures the image doesn't overflow horizontally */
+    max-height: 100%; /* Ensures the image doesn't overflow vertically */
+    width: auto; /* Keeps aspect ratio */
+    height: auto; /* Keeps aspect ratio */
+    object-fit: contain; /* Ensures the whole image is visible without cropping */
+    border-radius: 10px; /* Optional styling for rounded corners */
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3); /* Optional styling */
+}
 
 #nextButton {
-    margin-top: 20px;
+    margin-top: 10px;
     padding: 10px 20px;
     font-size: 1.2rem;
     font-weight: bold;
