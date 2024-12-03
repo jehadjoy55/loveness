@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     margin: 0;
     padding: 0;
@@ -11,6 +12,7 @@ body {
     overflow: hidden; /* Prevents horizontal overflow */
 }
 
+/* Container and Layout */
 .container {
     display: flex;
     flex-direction: column;
@@ -18,9 +20,10 @@ body {
     justify-content: center;
     width: 100%;
     height: 100%;
-    overflow-y: auto; /* Allows vertical scrolling for long images */
+    overflow-y: auto; /* Allows vertical scrolling for large images */
 }
 
+/* Image Styling */
 .image-wrapper {
     width: 100%; /* Full width of the screen */
     height: auto;
@@ -39,6 +42,7 @@ img {
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3); /* Optional styling */
 }
 
+/* Button Styling */
 #nextButton {
     margin-top: 10px;
     padding: 10px 20px;
@@ -57,8 +61,15 @@ img {
     background-color: #ff4070;
 }
 
+/* Blinking Animation for Button */
 @keyframes blink-animation {
     50% {
         opacity: 0.6;
     }
 }
+
+/* Hide Audio Player (Optional) */
+audio {
+    display: none;
+}
+
